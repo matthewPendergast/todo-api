@@ -1,0 +1,37 @@
+# Maven target folder
+/target/
+
+# IDE metadata
+.idea/
+*.iml
+*.ipr
+*.iws
+.project
+.classpath
+.settings/
+
+# Eclipse & VS Code
+.vscode/
+.factorypath
+
+# Mac / Windows system files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# H2 / database files
+*.mv.db
+*.h2.db
+
+# Build output
+/out/
+bin/
+
+# Spring Boot dev tools
+.spring-boot-devtools.properties
+
+# Misc
+/_dev-notes
+
