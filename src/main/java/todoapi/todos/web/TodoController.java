@@ -37,6 +37,12 @@ public class TodoController {
 		return ResponseEntity.created(location).body(created);
 	}
 
+	@DeleteMapping("/{id}")
+	@ResponseStatus(HttpStatus.NO_CONTENT)
+	public void delete(@PathVariable Long id) {
+		service.delete(id);
+	}
+
 	@GetMapping
 	public List<TodoResponse> list() {
 		return service.findAll();

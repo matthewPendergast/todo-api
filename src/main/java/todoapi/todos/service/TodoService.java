@@ -2,6 +2,8 @@ package todoapi.todos.service;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.server.ResponseStatusException;
 import todoapi.todos.data.Todo;
 import todoapi.todos.data.TodoRepository;
 import todoapi.todos.dto.TodoCreateRequest;
@@ -28,6 +30,14 @@ public class TodoService {
 
 		Todo saved = repo.save(t);
 		return toResponse(saved);
+	}
+
+	@Transactional
+	public void delete(Long id) {
+		if (!repo.existsById(id)) {
+			throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Todo " + id + " not found");
+		}
+		repo.deleteById(id);
 	}
 
 	@Transactional(readOnly = true)
