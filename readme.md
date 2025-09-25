@@ -115,7 +115,6 @@ This is a simple to-do list project I worked on to learn how to build a basic AP
 #### Example Request Body
 
 ```json
-PATCH /api/v1/todos/1
 {
   "title": "Buy milk and bread",
   "description": null,
