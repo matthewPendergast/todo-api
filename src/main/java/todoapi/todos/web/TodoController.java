@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/api/v1/todos")
+@RequestMapping("/api/todos")
 public class TodoController {
 
 	private final TodoService service;
@@ -70,6 +70,6 @@ public class TodoController {
 	public TodoResponse getOne(@PathVariable Long id) {
 		return service.findById(id)
 				.orElseThrow(() -> new ResponseStatusException(
-						HttpStatus.NOT_FOUND, "Todo " + id + " not found"));
+						HttpStatus.NOT_FOUND, "To-do " + id + " not found"));
 	}
 }

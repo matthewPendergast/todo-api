@@ -7,7 +7,7 @@ This is a simple to-do list project I worked on to learn how to build a basic AP
 <details>
 	<summary>
 		<b>GET</b>
-		<code>/api/v1/todos</code>
+		<code>/api/todos</code>
 		Returns a list of all current to-do items
 	</summary>
 
@@ -38,7 +38,7 @@ This is a simple to-do list project I worked on to learn how to build a basic AP
 <details>
 	<summary>
 		<b>GET</b>
-		<code>/api/v1/todos{id}</code>
+		<code>/api/todos{id}</code>
 		Returns the specified to-do item
 	</summary>
 
@@ -69,7 +69,7 @@ This is a simple to-do list project I worked on to learn how to build a basic AP
 <details>
 	<summary>
 		<b>POST</b>
-		<code>/api/v1/todos</code>
+		<code>/api/todos</code>
 		Creates a new to-do item
 	</summary>
 
@@ -104,7 +104,7 @@ This is a simple to-do list project I worked on to learn how to build a basic AP
 <details>
 	<summary>
 		<b>PATCH</b>
-		<code>/api/v1/todos/{id}</code>
+		<code>/api/todos/{id}</code>
 		Updates specified to-do item's fields
 	</summary>
 
@@ -130,7 +130,7 @@ This is a simple to-do list project I worked on to learn how to build a basic AP
 <details>
 	<summary>
 		<b>POST</b>
-		<code>/api/v1/todos/{id}/complete</code>
+		<code>/api/todos/{id}/complete</code>
 		Marks specified to-do items as complete
 	</summary>
 
@@ -145,7 +145,7 @@ This is a simple to-do list project I worked on to learn how to build a basic AP
 <details>
 	<summary>
 		<b>POST</b>
-		<code>/api/v1/todos/{id}/incomplete</code>
+		<code>/api/todos/{id}/incomplete</code>
 		Marks specified to-do items as incomplete
 	</summary>
 
@@ -160,7 +160,7 @@ This is a simple to-do list project I worked on to learn how to build a basic AP
 <details>
 	<summary>
 		<b>DELETE</b>
-		<code>/api/v1/todos/{id}</code>
+		<code>/api/todos/{id}</code>
 		Deletes the specific to-do item
 	</summary>
 

@@ -40,7 +40,7 @@ public class TodoService {
 	@Transactional
 	public TodoResponse update(Long id, Map<String, Object> updates) {
 		var todo = repo.findById(id)
-				.orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Todo " + id + " not found"));
+				.orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "To-do " + id + " not found"));
 
 		if (updates.containsKey("title")) {
 			Object v = updates.get("title");
@@ -113,7 +113,7 @@ public class TodoService {
 	@Transactional
 	public void delete(Long id) {
 		if (!repo.existsById(id)) {
-			throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Todo " + id + " not found");
+			throw new ResponseStatusException(HttpStatus.NOT_FOUND, "To-do " + id + " not found");
 		}
 		repo.deleteById(id);
 	}
@@ -138,7 +138,7 @@ public class TodoService {
 
 	private TodoResponse setCompleted(Long id, boolean value) {
 		var todo = repo.findById(id)
-				.orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Todo " + id + " not found"));
+				.orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "To-do " + id + " not found"));
 		todo.setCompleted(value);
 		var saved = repo.save(todo);
 		return toResponse(saved);
